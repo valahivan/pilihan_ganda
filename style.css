@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #ededed;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    background-color: #007bff;
+}
+.navbar ul{
+    width: 30%;
+    margin-left: 100px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar h3{
+    color: #ffffff;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 18px 20px;
+}
+.navbar ul li a:hover{
+    background-color: #c0deff;
+    color: #007bff;
+}
+.navbar .button-bars{
+    width: 28px;
+    height: 28px;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.button-bars .fa-bars{
+    font-size: 25px;
+    color: #ffffff;
+}
+.container{
+    max-width: 900px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    width: 400px;
+    height: 370px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.card-header{
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+    background-color: #007bff;
+}
+.card ol{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.card ol li{
+    margin-top: 5px;
+}
+.form-group{
+    margin-top: 10px;
+    height: 210px;
+    padding: 20px;
+}
+.card-footer{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 12px;
+    padding: 23px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #bdbdbd;
+}
+.card-hasil{
+    width: 700px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.card-hasil .formNilai{
+    height: 220px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.formNilai .nilai{
+    display: flex;
+    align-items: center;
+    width: 115px;
+    justify-content: space-between;
+}
+.formNilai span{
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    display: inline-block;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+button{
+    width: 90px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #ffa500;
+}
+button:hover{
+    background-color: #c58102;
+}
+footer{
+    padding: 20px;
+    background-color: #ffffff;
+    text-indent: 20px;
+    font-weight: bold;
+}
+@media screen and (max-width : 678px){
+    .navbar .button-bars{
+        display: flex;
+    }
+    .navbar ul{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        right: -100%;
+        background-color: #007bff;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40%;
+        transition:  0.5s;
+        opacity: 0;
+        flex-direction: column;
+    }
+    .navbar ul.open{
+        opacity: 1;
+        right: 0;
+    }
+    .container{
+        justify-content: center;
+    }
+}
